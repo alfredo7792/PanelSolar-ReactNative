@@ -130,6 +130,8 @@ export default function App() {
             {topic}: {topicData[topic] || 'No data'}
           </Text>
         ))}
+        <Text style={styles.loggedInTitle}>Grafico de regresion</Text>
+        <Image source={require('./assets/grafica_prediccion.png')}style={styles.image}/>
         <Button title="Salir" onPress={handleLogout} style={styles.salirButton} />
         <StatusBar style="auto" />
       </View>
