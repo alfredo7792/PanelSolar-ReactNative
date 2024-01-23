@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import init from 'react_native_mqtt';
+import MyLineChart from './MyLineChart'; 
 
 
 init({
@@ -133,6 +134,7 @@ export default function App() {
         <Text style={styles.loggedInTitle}>Grafico de regresion</Text>
         <Image source={require('./assets/grafica_prediccion.png')}style={styles.image}/>
         <Button title="Salir" onPress={handleLogout} style={styles.salirButton} />
+        <MyLineChart data={Object.values(topicData)} />
         <StatusBar style="auto" />
       </View>
     ) : (
